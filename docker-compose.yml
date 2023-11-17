@@ -6,4 +6,4 @@ services:
     env_file: .env
     volumes:
       - ~/.aws:/root/.aws
-    command: -v aws
+    command: aws
