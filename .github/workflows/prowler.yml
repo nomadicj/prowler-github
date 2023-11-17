@@ -23,9 +23,12 @@ jobs:
       run: |
         docker cp $(docker ps -aq --latest):/home/prowler/output ./output
 
+    - name: Set timestamp
+      run: echo "TIMESTAMP=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: Prowler-${{ format('{0:yyyyMMdd-HHmmss}', github.event.repository.pushed_at) }}
+        name: Prowler-${{ env.TIMESTAMP }}
         path: ./output/*
 
