@@ -1,8 +1,6 @@
 name: Deploy Prowler
 
 on: [push]
-  schedule:
-    - cron: '0 0 * * *'  # This schedule triggers the workflow at midnight UTC every day
 
 jobs:
   deploy:
