@@ -3,7 +3,7 @@ SHELL := /bin/bash
 .SILENT:
 
 # docker-compose calls
-PROWLER = docker-compose run prowler aws
+PROWLER = docker-compose run prowler
 
 ##@ Entry Points
 .PHONY: all
