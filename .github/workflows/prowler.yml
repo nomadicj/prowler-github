@@ -1,0 +1,16 @@
+name: Deploy Prowler
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This schedule triggers the workflow at midnight UTC every day
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Choose a runner. Here, we use the latest Ubuntu version
+
+    steps:
+    - uses: actions/checkout@v2  # This step checks out your repository
+
+    - name: Deploy Prowler
+      run: make prowler  # Run the deployment command
+
