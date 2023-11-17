@@ -21,7 +21,7 @@ jobs:
 
     - name: Copy output from container
       run: |
-        docker cp $(docker ps -aq --latest):/home/prowler/output/* ./output/
+        docker cp $(docker ps -aq --latest):/home/prowler/output ./output
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
