@@ -11,7 +11,7 @@ all: prowler ## Execute all SecOps functions against account provided
 
 .PHONY: prowler
 prowler: _clean ## Execute prowler CIS check against account provided
-	$(PROWLER) ./prowler || true
+	$(PROWLER) || true
 
 .PHONY: _clean
 _clean:
