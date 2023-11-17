@@ -6,4 +6,4 @@ services:
     env_file: .env
     volumes:
       - ~/.aws:/root/.aws
-    entrypoint: prowler -v aws
+    command: prowler -v aws
