@@ -16,6 +16,9 @@ jobs:
     - name: Deploy Prowler
       run: make prowler
 
+    - name: Get container name
+      run: docker ps -a
+
     - name: Copy output from container
       run: |
         docker cp prowler-github_prowler_run:/home/prowler/output/* ./output/
